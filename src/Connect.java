@@ -39,7 +39,5 @@ public class Connect {
     }
 
     public static void main(String[] args) {
-        connect();
-        System.out.println(System.getProperty("user.dir"));
     }
 }
