@@ -5,7 +5,7 @@ import java.io.File;
 
 public class Connect {
 
-    public static void connect() {
+    public void connect() {
         Connection conn = null;
         try {
 
@@ -29,7 +29,7 @@ public class Connect {
         }
     }
 
-    public static void createFile(String fileName) {
+    private void createFile(String fileName) {
         String directoryName = System.getProperty("user.dir") + "/databases/";
     
         File directory = new File(directoryName);
