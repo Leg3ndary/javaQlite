@@ -1,19 +1,19 @@
-import java.sql.Connection;  
-import java.sql.DriverManager;  
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.io.File;
-   
+
 public class Connect {
 
     public static void connect() {
-        Connection conn = null;  
+        Connection conn = null;
         try {
-            
+
             String url = "jdbc:sqlite:" + System.getProperty("user.dir") + "/databases/test.db";
             createFile(url);
-            // create a connection to the database
+
             conn = DriverManager.getConnection(url);
-              
+
             System.out.println("Connection to SQLite has been established.");
 
         } catch (SQLException e) {
@@ -41,5 +41,5 @@ public class Connect {
     public static void main(String[] args) {
         connect();
         System.out.println(System.getProperty("user.dir"));
-    }  
-}  
+    }
+}
